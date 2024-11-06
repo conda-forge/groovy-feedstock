@@ -1,5 +1,5 @@
 {% set name = "groovy" %}
-{% set version = "4.0.22" %}
+{% set version = "4.0.23" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/apache/groovy/archive//GROOVY_{{ version.replace(".", "_") }}.tar.gz
-  sha256: ce99b8e4851bad513ac8bfe0b2e7ccabe866d48873dfb63498845e72f904283b
+  sha256: 9b124a2d6bc7ed5ad3f35576ec13930610c03ec58e361b2aff967e842a98110c
 
 build:
   noarch: generic
