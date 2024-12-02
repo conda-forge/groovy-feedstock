@@ -3,7 +3,7 @@ About groovy-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/groovy-feedstock/blob/main/LICENSE.txt)
 
-Home: https://www.groovy-lang.org
+Home: https://www.groovy-lang.org/
 
 Package license: Apache-2.0
 

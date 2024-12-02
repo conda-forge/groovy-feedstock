@@ -1,17 +1,17 @@
-{% set name = "groovy" %}
-{% set version = "4.0.22" %}
+context:
+  version: 4.0.22
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: groovy
+  version: ${{ version }}
 
 source:
-  url: https://github.com/apache/groovy/archive//GROOVY_{{ version.replace(".", "_") }}.tar.gz
+  url: https://github.com/apache/groovy/archive//GROOVY_${{ version | replace(".", "_") }}.tar.gz
   sha256: ce99b8e4851bad513ac8bfe0b2e7ccabe866d48873dfb63498845e72f904283b
 
 build:
-  noarch: generic
   number: 0
+  noarch: generic
 
 requirements:
   build:
@@ -23,18 +23,18 @@ requirements:
   run:
     - openjdk
 
-test:
-  commands:
-    - groovysh --help
+tests:
+  - script:
+      - groovysh --help
 
 about:
-  home: https://www.groovy-lang.org
   license: Apache-2.0
   license_file:
     - LICENSE
     - target/generated-resources/licenses/
   summary: Java-based scripting language
-  dev_url: https://github.com/apache/groovy
+  homepage: https://www.groovy-lang.org
+  repository: https://github.com/apache/groovy
 
 extra:
   recipe-maintainers:

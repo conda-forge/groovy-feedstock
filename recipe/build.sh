@@ -20,6 +20,7 @@ tee ${PREFIX}/bin/${bin_name} << EOF
 #!/bin/sh
 exec \${CONDA_PREFIX}/libexec/groovy/bin/${bin_name} "\$@"
 EOF
+chmod +x ${PREFIX}/bin/${bin_name}
 }
 
 export -f env_script
