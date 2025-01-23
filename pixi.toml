@@ -4,7 +4,7 @@
 
 [project]
 name = "groovy-feedstock"
-version = "3.45.2"
+version = "3.45.3"
 description = "Pixi configuration for conda-forge/groovy-feedstock"
 authors = ["@conda-forge/groovy"]
 channels = ["conda-forge"]
