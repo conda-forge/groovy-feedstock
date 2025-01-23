@@ -37,12 +37,12 @@ export -f env_script_win
 
 # Build artifact with gradle and extract zip file
 ./gradlew clean dist
-mv subprojects/groovy-binary/build/distributions/apache-groovy-binary-${PKG_VERSION}.zip .
-unzip apache-groovy-binary-${PKG_VERSION}.zip
+mv subprojects/groovy-binary/build/distributions/apache-groovy-binary-${PKG_VERSION//_/.}.zip .
+unzip apache-groovy-binary-${PKG_VERSION//_/.}.zip
 
 mkdir -p ${PREFIX}/libexec/${PKG_NAME}
 mkdir -p ${PREFIX}/bin
-cp -r groovy-${PKG_VERSION}/* ${PREFIX}/libexec/${PKG_NAME}
+cp -r groovy-${PKG_VERSION//_/.}/* ${PREFIX}/libexec/${PKG_NAME}
 
 # Create bash and batch wrappers for all executables
 find ${PREFIX}/libexec/${PKG_NAME}/bin -type f | grep -v ".bat" | grep -v ".ico" | sort -u | xargs -I % bash -c "env_script %"
