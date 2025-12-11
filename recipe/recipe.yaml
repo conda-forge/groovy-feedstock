@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/apache/groovy/archive//GROOVY_${{ version | replace(".", "_") }}.tar.gz
-  sha256: 9fb20f2d741dab87453428c0599cffbe623f882fdbadf88e8971ec56d4f95816
+  sha256: 2c41e84fb26a91f37344af7253e0983fb28e7d9d8f82843f1dd88ad68c298a40
 
 build:
   number: 0
