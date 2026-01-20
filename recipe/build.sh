@@ -8,6 +8,7 @@ download_licenses() {
     pom_xml=$(dirname ${pom_file})/pom.xml
     mv ${pom_file} ${pom_xml}
     pushd $(dirname ${pom_xml})
+    sed -i 's/5.0.4/5.0.3/' pom.xml
     mvn license:download-licenses -Dgoal=download-licenses
     popd
 }
@@ -33,7 +34,6 @@ EOF
 }
 
 export -f env_script_win
-
 
 # Build artifact with gradle and extract zip file
 ./gradlew clean dist

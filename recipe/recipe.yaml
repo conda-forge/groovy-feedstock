@@ -1,5 +1,5 @@
 context:
-  version: "5_0_3"
+  version: "5_0_4"
 
 package:
   name: groovy
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/apache/groovy/archive//GROOVY_${{ version | replace(".", "_") }}.tar.gz
-  sha256: ad064418c1167754a650e834d2805e0208d4ca8f3a6461bfbff962f8b6285d63
+  sha256: 0cc06dd0b7c6e75bd751460d4a71446bdeea5e70f60c7b91f47836f72bb1729b
 
 build:
   number: 0
@@ -20,6 +20,7 @@ requirements:
     - maven
     - openjdk >=17,<18
     - unzip
+    - sed
   run:
     - openjdk
 
