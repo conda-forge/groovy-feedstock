@@ -20,6 +20,7 @@ requirements:
     - maven
     - openjdk >=17,<18
     - unzip
+    - sed
   run:
     - openjdk
 
