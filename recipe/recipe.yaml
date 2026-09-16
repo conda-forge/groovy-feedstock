@@ -1,5 +1,5 @@
 context:
-  version: "5_1_0"
+  version: "5_1_2"
 
 package:
   name: groovy
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/apache/groovy/archive//GROOVY_${{ version | replace(".", "_") }}.tar.gz
-  sha256: 74e324b0f73f151459b6db94baa7ece23ae584e2e76c5567593a89d537cedfc1
+  sha256: 415d0a251cf83002cc236361b39f2731dcefc4cab1f4c9b2c12524bdc93c0280
 
 build:
   number: 0
